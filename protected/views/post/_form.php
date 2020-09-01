@@ -5,7 +5,10 @@
 ?>
 
 <div class="form">
-
+    <?php $form=$this->beginWidget('CActiveForm', array(
+        'id'=>'comment-form',
+        'enableAjaxValidation'=>true,
+    )); ?>
 <?php $form=$this->beginWidget('CActiveForm', array(
 	'id'=>'post-form',
 	// Please note: When you enable ajax validation, make sure the corresponding
@@ -67,5 +70,5 @@
 	</div>
 
 <?php $this->endWidget(); ?>
-
+    <?php $this->endWidget(); ?>
 </div><!-- form -->
