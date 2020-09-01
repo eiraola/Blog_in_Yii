@@ -1,4 +1,5 @@
 <?php /* @var $this Controller */ ?>
+asdfadsfasdgasdgasdfasdfgasdfasdfgasdfasdf
 <?php $this->beginContent('//layouts/main'); ?>
 <div class="span-19">
 	<div id="content">
@@ -7,6 +8,8 @@
 </div>
 <div class="span-5 last">
 	<div id="sidebar">
+        <?php if(!Yii::app()->user->isGuest) $this->widget('UserMenu'); ?>
+
 	<?php
 		$this->beginWidget('zii.widgets.CPortlet', array(
 			'title'=>'Operations',
@@ -20,3 +23,4 @@
 	</div><!-- sidebar -->
 </div>
 <?php $this->endContent(); ?>
+
